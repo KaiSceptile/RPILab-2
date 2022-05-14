@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded',()=>
     let input_2 = document.getElementById("input_2");
     let input_3 = document.getElementById("input_3");
     let btn = document.getElementById("send");
-    const check = () => btn.disabled = in_2.validity.typeMismatch ||  in_1.value.length < 2 || in_2.value.length < 3  || in_3.value.length != 18;
+    const check = () => btn.disabled = input_2.validity.typeMismatch ||  input_1.value.length < 2 || input_2.value.length < 3  || input_3.value.length != 18;
     var isMenuShow = 2
     closeButton.onclick=function (){
         modal1.classList.remove('modal_active');
@@ -48,10 +48,11 @@ document.addEventListener('DOMContentLoaded',()=>
     applicForm.addEventListener('submit', handleFormSubmit)
     async function handleFormSubmit(event) {
         event.preventDefault()
-        modal3.classList.add('modal_active');
-        modal1.classList.remove('modal_active');
         isMenuShow = 1
         sessionStorage.setItem("someVarKey", isMenuShow)
+        modal3.classList.add('modal_active');
+        modal1.classList.remove('modal_active');
+        
         setTimeout(function() {
             modal3.classList.remove('modal_active');
             modalOverlay.classList.remove('modal-overlay');

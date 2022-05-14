@@ -2,7 +2,7 @@ let slideIndex;
 let IsRefresh=sessionStorage.getItem("IsRefresh");
     if(IsRefresh != null && IsRefresh !=""){
         slideIndex=sessionStorage.getItem("ind");
-        sessionStorage.clear()
+        //sessionStorage.clear()
     }
     else{
         slideIndex=1;
