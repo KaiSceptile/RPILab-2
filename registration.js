@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded',()=>
 });
 
 window.addEventListener("DOMContentLoaded", function () {
-    [].forEach.call(document.querySelectorAll('.for2'), function (input) {
+    [].forEach.call(document.querySelectorAll('.inputphone'), function (input) {
         var keyCode;
         function mask(event) {
             event.keyCode && (keyCode = event.keyCode);
